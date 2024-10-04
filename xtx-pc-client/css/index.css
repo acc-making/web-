@@ -1,0 +1,322 @@
+/* 放index的样式图 */
+/* banner */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .workarea {
+    position: relative;
+    height: 500px;
+}
+
+/* 测导航 */
+.banner .aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgb(0,0,0,0.8);
+}
+
+.banner .aside li{
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside li a{
+    position: relative;
+    padding-left: 36px;
+    padding-right: 19px;
+    font-size: 16px;
+    display: block;
+    height: 50px;
+    color: #fff;
+}
+
+.banner .aside span{
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.banner .aside a:hover{
+    background-color: #27ba9b;
+}
+
+.banner .aside a::after{
+    position: absolute;
+    content: "";
+    /* 这里的位置是插入li标签的"物品"位置 */
+    right: 26px;
+    top: 19px;
+    /* 这里的宽度和高度是要插入到a标签后面元素宽度和高度（就是li标签的"物品"大小）这里是箭头 */
+    width: 6px;
+    height: 11px;
+    /* background-color: #27ba9b; */
+    background-image: url(../images/sprites.png);
+    background-position: -41px -111px;
+}
+
+.prve,
+.next{
+    /* 定位父级，这里定位为的是banner，所以这里的操作都是在banner的左上角定义的 */
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 44px;
+    /* 给按钮设置背景颜色 */
+    background-color: rgba(0,0,0,0.3);
+    background-image: url(../images/sprites.png);
+    /* 用于设置元素的边角半径。具体来说，50% 的值会使元素的边角变得完全圆形。 */
+    border-radius: 50%;
+}
+
+.prve{
+    left: 260px;
+    background-position:14px -60px;
+}
+
+.next{
+    right: 10px;
+    background-position:-22px -60px;
+}
+
+/* 圆点 */
+.banner ol{
+    position: absolute;
+    left: 700px;
+    bottom: 30px;
+    width: 200px;
+    height: 10px;
+    /* background-color: aquamarine; */
+}
+
+.banner ol li{
+    float: left;
+    width: 9px;
+    height: 10px;
+    background-color: rgba(0,0,0,0.3);
+    margin-right: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner ol .current{
+    background-color: #fff;
+}
+
+/* 内容 */
+.goods .hd{
+    height: 114px;
+    color: #333;
+    /* background-color: rgb(44, 1, 48); */
+    line-height: 114px;
+}
+
+.goods .hd h2{
+    float:left ;
+    height: 114px;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.goods .hd span{
+    font-size: 16px;
+    color: #999;
+    margin-left: 20px;
+}
+
+.goods .hd a,
+.fresh .hd .more{
+    position: relative;
+    float: right;
+    margin-right: 17px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd a::after{
+    position: absolute;
+    margin-right: -17px;
+    content: "";
+    /* 这里的位置是插入li标签的"物品"位置 */
+    top: 50px;
+    right: 0px;
+    /* 这里的宽度和高度是要插入到a标签后面元素宽度和高度（就是li标签的"物品"大小）这里是箭头 */
+    width: 7px;
+    height: 13px;
+    /* background-color: #27ba9b; */
+    background-image: url(../images/sprites.png);
+    background-position: 0px -110px;
+    vertical-align: middle;
+}
+
+/* 这里有个问题，会发现定义图片背景的时候位置不对，直接找有个标题的问题 */
+/* 这里的问题就是《h2》标签没有定义114px,导致不知道什么原因，高度变成118px,
+/* 让下层的位置条件不满足，导致图片背景位置不对 */ 
+.goods .bd li{
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+}
+
+.goods .bd li:last-child{
+    margin-right: 0;
+}
+
+.goods .bd li img{
+    width: 304px;
+}
+
+.goods .bd .hot{
+    width: 60px;
+    top: 20px;
+    right: -6px;
+    position: absolute;
+}
+
+.goods .bd li h3{
+    margin-top: 22px;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+}
+
+.goods .bd li div{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.goods .bd li span{
+    font-size: 23px;
+    color: #9a2e1f;
+}
+
+.goods .bd li b{
+    position: absolute;
+    top: 18px;
+    left: 17px;
+    width: 28px;
+    height: 51px;
+    border: 2px solid #27ba9b;
+    /* box-shadow: 0px 0px 2px 2px #8dff89; */
+    font-size: 16px;
+    text-align: center;
+    color: #27ba9b;
+}
+
+/* 生鲜板块 */
+.fresh .hd{
+    height: 96px;
+    /* background-color: aquamarine; */
+    line-height: 96px;
+}
+
+.fresh .hd h2{
+    float: left;
+    font-size: 29px;
+    color: #333;
+}
+
+
+/* 这里和上面的操作相同，可以直接在《139行》
+.goods .hd a::after(这个语句后面加上“,”逗号隔开加入.fresh .hd a::after，
+实现同一个效果)*/
+/* 在这里只是实现了颜色相同：.goods .hd a,.fresh .hd .more (就引用了上面的130行的样式)
+*/
+.fresh .hd .more{
+    float: right;
+    margin-left: 60px;
+}
+
+/* 这里因为top: 41px;不同，所以另起一个 */
+.fresh .hd a::after{
+    position: absolute;
+    margin-right: -17px;
+    content: "";
+    /* 这里的位置是插入li标签的"物品"位置 */
+    top: 41px;
+    right: 0px;
+    /* 这里的宽度和高度是要插入到a标签后面元素宽度和高度（就是li标签的"物品"大小）这里是箭头 */
+    width: 7px;
+    height: 13px;
+    /* background-color: #27ba9b; */
+    background-image: url(../images/sprites.png);
+    background-position: 0px -110px;
+    vertical-align: middle;
+}
+
+.fresh .hd ul{
+    float: right;
+}
+
+.fresh .hd ul li {
+    float: left;
+}
+
+.fresh .hd li a{
+    padding: 2px 7px;
+    margin-left: 6px;
+}
+
+.fresh .hd  li a:hover{
+    color: #fff;
+    background-color: aquamarine;
+}
+
+.fresh .bd .left{
+    float: left;
+    width: 240px;
+    height: 610px;
+    background-color: aquamarine;
+}
+
+.fresh .bd .right ul{
+    float: left;
+    width: 1000px;
+    height: 610px;
+    /* background-color: blueviolet; */
+}
+
+.fresh .bd .right li{
+    float: left;
+    width: 242px;
+    height: 304px;
+    /* background-color: aqua; */
+    margin-left: 8px;
+    padding-left: 29px;
+    padding-top: 8px;
+}
+
+.fresh .bd .right li .one img{
+    width: 184;
+    height: 184px;
+    background-color: rgb(169, 236, 214);
+}
+
+.fresh .bd .right li .one p{
+    margin: 0 auto;
+}
+
+.fresh .bd .right li .one div{
+    margin-top: 10px;
+    margin-left: 56px;
+}
+
+.fresh .bd .right li .one span{
+    font-size: 23px;
+    color: #9a2e1f;
+}
+
+.fresh .bd .right li .one .op{
+    width: 242px;
+    height: 304px;
+    background-color: brown;
+    margin-right:29px;
+}
+
+

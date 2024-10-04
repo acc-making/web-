@@ -1,0 +1,259 @@
+/* 该网页中多个网页相同模块的重复样式 */
+/* 首页的css文件 */
+
+/* 版心居中 */
+.workarea {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 这是设置浏览器设置背景快捷导航的样式 */
+.framework{
+    height: 52px;
+    background-color: #333;
+}
+
+/* 在这里就是在你设置的背景快捷导航的版心位置操作 */
+.framework .workarea{
+    height: 52px;
+    /* background-color: aliceblue; */
+}
+
+.framework .workarea ul{
+    float: right;
+}
+
+.framework .workarea li{
+    float: left;
+    line-height: 52px;
+}
+
+.framework .workarea a{
+    padding: 0 16px;
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+.framework .workarea  a span{
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    background-image: url(../images/sprites.png);
+    background-position: -160px -70px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* 清除a的边框线：最后一个li里面的a */
+/* .framework .workarea li:last-child a，意思是对最后一个 <li> 内的链接 <a> 移除所有的边框 */
+.framework .workarea li:last-child a{
+    border: 0;
+}
+
+/* 头部 */
+.header{
+    margin: 30px auto;
+    height: 70px;
+}
+
+.logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+    /* background-color: aqua; */
+}
+
+.logo h1{
+    width: 207px;
+    height: 70px;
+}
+
+/* 搜索引擎优化方法 */
+.logo h1 a{
+    display: block;
+    width: 207px;
+    height: 70px;
+    background-image: url(../images/logo.png);
+    /* background-size: contain; 的意思是背景图像将被缩放，以确保其适合元素的尺寸，同时保持图像的纵横比 */
+    background-size: contain;
+    /* font-size:0；目的：“隐藏字体” */
+    font-size: 0;
+}
+
+
+.nav {
+    float: left;
+    margin-left: 40px;
+    height: 70px;
+    /* background-color: aquamarine; */
+}
+
+.nav li{
+    float: left;
+    margin-right: 48px;
+    line-height: 70px;
+}
+
+.nav li a{
+    padding-bottom: 7px;
+    font-size: 16px;
+    color: #333;
+}
+
+.nav a:hover{
+    color: #27ba96;
+    border-bottom: 1px solid #27ba96;
+}
+
+.search {
+    position: relative;
+    margin-left: 34px;
+    margin-top: 24px;
+    float: left;
+    width: 172px;
+    height: 30px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.search input{
+    padding-left: 30px;
+    width: 172px;
+    height: 28px;
+}
+
+.search input::placeholder{
+    font-size: 14px;
+    color: #ccc;
+}
+
+.search span{
+    /* 绝对定位盒子具有行内块标签 */
+    position: absolute;
+    /* display: inline-block; */
+    width: 18px;
+    height: 18px;
+    /* background-color: brown; */
+    background-image: url(../images/sprites.png);
+    background-position: -79px -70px;
+    left: 1px;
+    top: 5px;
+}
+
+.car {
+    /* 这个定位的是sprite图片的购物车图标 */
+    /* 这里为什么不用实现span标签呢？因为如果是单个的操作没有什么附加且条件，是不用span标签 */
+    position: relative;
+    margin-left: 18px;
+    float: left;
+    width: 23px;
+    height: 23px;
+    /* background-color: #ff0f0f; */
+    background-image: url(../images/sprites.png);
+    background-position: -122px -70px;
+    margin-top: 28px;
+}
+
+.car span{
+    /* 这里的定位也是一个要理解的地方：定位的根本操作第一时间都是跟着父级元素进行定位 */
+    position: absolute;
+    right: -8px;
+    top:-4px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+    font-size: 13px;
+    color: aliceblue;
+    line-height: 15px;
+    text-align: center;
+}
+
+/* 底部版权 */
+/* 底部板块分为两个部分 */
+.footer {
+    height: 344px;
+    background-color: #333;
+}
+
+/* 在底部区域的版心不一样，从新给定义了版心宽度 */
+.footer .workarea{
+    width: 1393px;
+}
+
+/* 底部的头板块 */
+.footer .top{
+    padding-left: 135px;
+    padding-top: 60px;
+    height: 175px;
+    /* 这里在直接让头板块的盒子底部加上边框 */
+    border-bottom: 1px solid #434343
+}
+
+.footer .top li{
+    float: left;
+    margin-right: 300px;
+    width: 186px;
+    height: 58px;
+    color: #e26237;
+    font-size: 28px;
+    /* background-color: #e26237;
+    background-image: url(../images/sprites.png); */
+    background-position: 0px 0px;
+}
+
+.footer .top li:last-child{
+    margin-right: 0;
+}
+
+.footer .top li span {
+    display: inline-block;
+    margin-right: 16px;
+    width: 58px;
+    height: 58px;
+    vertical-align: middle;
+}
+
+.one {
+    background-image: url(../images/sprites.png);
+    background-position: 0px 0px;
+}
+
+.two {
+    background-image: url(../images/sprites.png);
+    background-position: -130px 0px;
+}
+
+.three {
+    background-image: url(../images/sprites.png);
+    background-position: -65px 0px;
+}
+
+.footer .bottom ul{
+    width: 570px;
+    height: 16px;
+    /* background-color: #e26237; */
+    margin-top: 41px;
+    margin-left: 450px;
+}
+
+.footer .bottom li{
+    float: left;
+}
+
+.footer .bottom li a{
+    font-size: 14px;
+    color: #999;
+    padding: 0 10px;
+    border-right:1px solid #999;   
+}
+
+.footer .bottom li:last-child a{
+    border: 0;
+}
+
+.footer .bottom p{
+    margin-left: 650px;
+    margin-top: 46px;
+    color: #128b65;
+}
