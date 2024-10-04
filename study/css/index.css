@@ -1,0 +1,404 @@
+/* css美化 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3f5f7;
+}
+
+/* 结合ul>li的样式清除点 */
+.one li{
+    list-style: none;
+}
+
+.one li a{
+    text-decoration: none;
+}
+
+.six::before,
+.six::after{
+    content: '';
+    display: table;
+}
+.six::after{
+    clear: both;
+}
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto; 
+}
+
+.header{
+    height: 41px;
+    /* background-color: rgb(180, 245, 179); */
+    /* 这里的margin要用auto来居中，因为wrapper它的margin是用auto,这里用0的话会被挤到左边（被覆盖了） */
+    margin: 30px auto;
+}
+
+h1{
+    float: left;
+}
+
+.one{
+    float: left;
+    margin-left: 70px;
+    height: 41px;
+    /* background-color: chocolate; */
+}
+
+.one li{
+    float:left;
+    margin-right: 26px;
+    
+}
+
+.one li a{
+    display: block;
+    padding: 0 9px;
+    height: 41px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #000;
+}
+
+.one li a:hover{
+    border-bottom:2px solid #00a4ff;
+    /* background-color: chartreuse; */
+}
+
+.two{
+    float: left;
+    margin-left: 59px;
+    width: 412px;
+    height: 41px;
+    border: 1px solid #00a4ff;
+}
+
+.two input{
+    float: left;
+    padding-left: 21px;
+    width: 360px;
+    height: 40px;
+}
+
+/* 如果想控制placeholder的字号和颜色，可以用::placeholder选择器 */
+.two input::placeholder{
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.two button{
+    float: left;
+    width: 50px;
+    height: 40px;
+    background-image: url(../images/btn.png);
+    border: 0;
+}
+
+.user{
+    float: right;
+    margin-right: 30px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.user img{
+    /* 图片水平居中 */
+    vertical-align: middle;
+}
+
+.banner{
+    height: 420px;
+    background-color: #1c036c;
+}
+
+/* 这里细节，专门指向bammer wrapper来保证图片的调整不影响其他因素 */
+.banner .wrapper{
+    height: 420px;
+    background-image: url(../images/banner2.png);
+}
+
+.banner .list{
+    float: left;
+    padding: 0 20px;
+    width: 190px;
+    height: 420px;
+    line-height: 46px;
+    background-color: rgb(0,0,0,0.3);
+}
+
+.banner .right{
+    float: right;
+    width: 228px;
+    height: 300px;
+    background-color:rgb(255, 255, 255);
+    margin-top:50px;
+}
+
+.list li{
+    list-style: none;
+}
+
+.list li a{
+    text-decoration: none;
+}
+
+.banner .list span{
+    float: right;
+}
+
+.banner .list a{
+    font-size: 14px;
+    color: #fff;
+}
+
+.banner .list a:hover{
+    color: #00b4ff;
+}
+
+.banner .right h2{
+    height: 48px;
+    font-size: 18px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+}
+
+.banner .right .content{
+    padding: 0 20px;
+}
+
+.banner .right .content dl{
+    padding: 12px 0;
+    border-bottom: 2px solid #f8f8f8 ;
+}
+
+.banner .right .content dt{
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.banner .right .content dd{
+    font-size: 14px;
+    color: #4e4e4e
+}
+
+.banner .right .button{
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align:center;
+    border: #00b4ff 1px solid;
+
+    font-size: 16px;
+    color: #00a4ff;
+    font-weight: 700;
+    
+    text-decoration: none;
+}
+
+.banner .right .button:hover{
+    background-color: #26db35;
+}
+
+.groom{
+    width: 1200px;
+    height: 60px;
+    background-color: #ffffff;
+    margin-top: 8px;
+    box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2);
+        line-height: 60px;
+        text-align: center;
+        
+}
+
+.groom li{
+    list-style: none;
+}
+
+.groom li a{
+    text-decoration: none;
+}
+
+.groom li{
+    float: left;
+}
+
+.groom h2{
+    float: left;
+    margin-left: 34px;
+    font-size: 16px;
+    color: #00a4ff;
+    font-weight: 400;
+}
+
+.groom ul{
+    float: left;
+    margin-left: 30px;
+    color: black;
+}
+
+/* 这里非常细节，想要左边线跟字体一致，就需要在跟字体一个地方 */
+.groom li a{
+    border-left: #bfbfbf 1px solid;
+    padding: 0 30px;
+}
+
+.groom .interest{
+    float: right;
+    margin-right: 26px;
+    font-size: 14px;
+    color: #00a4ff;
+    text-decoration: none;
+}
+
+.process{
+    margin-top: 35px;
+}
+
+.process .framework{
+    height: 40px;
+    /* background-color: #00b4ff; */
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+.process .framework h2{
+    float: left;
+    color: #494949;
+    /* 这个作用指定用微软雅黑字体 */
+    font-family: MicrosoftYaHei;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+}
+.process .framework a{
+    float: right;
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a5a5a5;
+    text-decoration: none;
+}
+
+.process .framework a:hover{
+    color: #ff00bf;
+}
+
+.content li{
+    list-style: none;
+}
+
+.content li a{
+    text-decoration: none;
+}
+
+.process .content li{
+    float: left;
+    width: 227px;
+    height: 269px;
+    background-color: aquamarine;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.process li:nth-child(5n){
+    margin-right: 0;
+}
+
+.process .content li h3{
+    padding: 20px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+
+.process .content li p{
+    padding: 0 20px;
+    font-size: 12px;
+    color: #606060;
+}
+
+.process .content li p span{
+    color: #ff7c2d;
+}
+
+.footer{
+    width: 1919px;
+    height: 417px;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+.footer .left{
+    float: left;
+    margin-top: 33px;
+    margin-right: 200px;
+}
+
+.footer .left p{
+    margin: 25px 0 25px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.footer .left a{
+    /* 按钮创建成块 */
+    display:block;
+    width: 120px;
+    height: 36px;
+    /* 清除下滑线 */
+    text-decoration: none;
+    border: 1px solid #00a4ff;
+
+    /* 只有变成块才能调整字体居中位置 */
+    text-align: center;
+    line-height: 36px;
+    color: rgb(255, 0, 166);
+}
+
+.footer .right{
+    float: left;
+    margin-top: 36px;
+}
+
+.footer .right dl{
+    float: right;
+    margin-right: 85px;
+}
+
+.footer .right dt{
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.footer .right a{
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(0, 93, 159);
+}
+
+.footer .right a:hover{
+    color: #ff7c2d;
+}
+
+/* 标签 */
+.process .content li{
+    position: relative;
+}
+
+.process .content li .hot{
+    position: absolute;
+    top: 12px;
+    right: -4px;
+}
